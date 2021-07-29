@@ -43,7 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome, Version=1.0.5578.25903, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome-ASP.NET.1.0.5578.25903\lib\net451\FontAwesome.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,6 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\AdminLogin.aspx" />
     <Content Include="admin\assets\css\animate.css\css\animate.css" />
     <Content Include="admin\assets\css\bootstrap\css\bootstrap.min.css" />
     <Content Include="admin\assets\css\chartist\chartist.css" />
@@ -95,6 +101,9 @@
     <Content Include="admin\assets\icon\Simple-Line-Icons.svg" />
     <Content Include="admin\assets\icon\themify-icons\fonts\themify.svg" />
     <Content Include="admin\assets\icon\themify-icons\themify-icons.css" />
+    <Content Include="admin\assets\imageonline-co-whitebackgroundremoved.png" />
+    <Content Include="admin\assets\images\about4.jpg" />
+    <Content Include="admin\assets\images\admin_logo.jpg" />
     <Content Include="admin\assets\images\auth\logo-dark.png" />
     <Content Include="admin\assets\images\auth\Logo-small-bottom.png" />
     <Content Include="admin\assets\images\auth\logo.png" />
@@ -110,6 +119,8 @@
     <Content Include="admin\assets\images\browser\opera.png" />
     <Content Include="admin\assets\images\browser\safari.png" />
     <Content Include="admin\assets\images\favicon.ico" />
+    <Content Include="admin\assets\images\forgotimgadmin.png" />
+    <Content Include="admin\assets\images\happyadmin.png" />
     <Content Include="admin\assets\images\logo-blue.png" />
     <Content Include="admin\assets\images\mega-menu\01.jpg" />
     <Content Include="admin\assets\images\mega-menu\02.jpg" />
@@ -231,6 +242,1530 @@
     <Content Include="admin\assets\pages\widget\amchart\worldLow.min.js" />
     <Content Include="admin\assets\pages\widget\excanvas.js" />
     <Content Include="admin\dashboard.aspx" />
+    <Content Include="admin\alluser.aspx" />
+    <Content Include="admin\Forgotform.aspx" />
+    <Content Include="admin\manageoperator.aspx" />
+    <Content Include="admin\managedepartment.aspx" />
+    <Content Include="admin\adddepartment.aspx" />
+    <Content Include="admin\managezone.aspx" />
+    <Content Include="admin\addzone.aspx" />
+    <Content Include="admin\manageward.aspx" />
+    <Content Include="admin\addward.aspx" />
+    <Content Include="admin\manageproblems.aspx" />
+    <Content Include="admin\addproblems.aspx" />
+    <Content Include="admin\solvedcomplaint.aspx" />
+    <Content Include="admin\managefeedback.aspx" />
+    <Content Include="admin\managefaq.aspx" />
+    <Content Include="admin\addfaq.aspx" />
+    <Content Include="admin\addsubdepartment.aspx" />
+    <Content Include="admin\approvedcomplaint.aspx" />
+    <Content Include="admin\commaster.aspx" />
+    <Content Include="admin\reopencomplaint.aspx" />
+    <Content Include="citizen\citizenassets\css\bootstrap\css\bootstrap.min.css" />
+    <Content Include="citizen\citizenassets\css\custom.css" />
+    <Content Include="citizen\citizenassets\icon\ico_about.png" />
+    <Content Include="citizen\citizenassets\icon\ico_contact.png" />
+    <Content Include="citizen\citizenassets\icon\ico_grievance.png" />
+    <Content Include="citizen\citizenassets\icon\ico_help.png" />
+    <Content Include="citizen\citizenassets\icon\ico_home.png" />
+    <Content Include="citizen\citizenassets\icon\ico_nodal.png" />
+    <Content Include="citizen\citizenassets\icon\ico_redress.png" />
+    <Content Include="citizen\citizenassets\icon\ico_view %281%29.png" />
+    <Content Include="citizen\citizenassets\icon\ico_view.png" />
+    <Content Include="citizen\citizenassets\icon\ionicon\accessibility-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\accessibility-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\accessibility.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\add-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\add-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\add-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\add-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\add-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\add.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\airplane-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\airplane-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\airplane.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\alarm-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\alarm-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\alarm.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\albums-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\albums-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\albums.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\alert-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\alert-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\alert-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\alert-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\alert-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\alert.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\american-football-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\american-football-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\american-football.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\analytics-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\analytics-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\analytics.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\aperture-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\aperture-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\aperture.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\apps-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\apps-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\apps.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\archive-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\archive-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\archive.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-back-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-back-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-back-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-back-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-back-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-back.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-down-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-down-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-down-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-down-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-down-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-down.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-forward-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-forward-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-forward-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-forward-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-forward-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-forward.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-redo-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-redo-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-redo-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-redo-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-redo-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-redo.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-undo-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-undo-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-undo-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-undo-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-undo-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-undo.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-up-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-up-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-up-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-up-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-up-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\arrow-up.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\at-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\at-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\at-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\at-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\at-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\at.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\attach-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\attach-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\attach.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\backspace-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\backspace-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\backspace.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-add-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-add-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-add.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-check-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-check-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-check.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-handle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-handle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-handle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-remove-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-remove-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-remove.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bag.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\balloon-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\balloon-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\balloon.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ban-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ban-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ban.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bandage-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bandage-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bandage.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bar-chart-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bar-chart-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bar-chart.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\barbell-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\barbell-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\barbell.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\barcode-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\barcode-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\barcode.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\baseball-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\baseball-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\baseball.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\basket-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\basket-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\basket.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\basketball-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\basketball-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\basketball.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\battery-charging-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\battery-charging-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\battery-charging.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\battery-dead-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\battery-dead-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\battery-dead.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\battery-full-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\battery-full-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\battery-full.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\battery-half-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\battery-half-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\battery-half.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\beaker-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\beaker-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\beaker.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bed-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bed-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bed.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\beer-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\beer-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\beer.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bicycle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bicycle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bicycle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bluetooth-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bluetooth-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bluetooth.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\boat-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\boat-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\boat.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\body-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\body-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\body.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bonfire-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bonfire-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bonfire.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\book-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\book-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\book.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bookmark-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bookmark-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bookmark.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bookmarks-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bookmarks-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bookmarks.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bowling-ball-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bowling-ball-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bowling-ball.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\briefcase-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\briefcase-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\briefcase.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\browsers-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\browsers-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\browsers.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\brush-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\brush-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\brush.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bug-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bug-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bug.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\build-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\build-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\build.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bulb-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bulb-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bulb.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bus-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bus-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\bus.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\business-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\business-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\business.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cafe-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cafe-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cafe.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\calculator-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\calculator-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\calculator.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\calendar-clear-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\calendar-clear-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\calendar-clear.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\calendar-number-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\calendar-number-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\calendar-number.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\calendar-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\calendar-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\calendar.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\call-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\call-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\call.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\camera-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\camera-reverse-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\camera-reverse-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\camera-reverse.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\camera-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\camera.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\car-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\car-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\car-sport-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\car-sport-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\car-sport.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\car.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\card-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\card-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\card.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-back-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-back-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-back-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-back-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-back-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-back.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-down-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-down-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-down-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-down-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-down-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-down.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-forward-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-forward-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-forward-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-forward-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-forward-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-forward.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-up-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-up-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-up-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-up-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-up-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\caret-up.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cart-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cart-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cart.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cash-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cash-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cash.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cellular-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cellular-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cellular.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbox-ellipses-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbox-ellipses-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbox-ellipses.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbox-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbox-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbox.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbubble-ellipses-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbubble-ellipses-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbubble-ellipses.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbubble-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbubble-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbubble.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbubbles-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbubbles-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chatbubbles.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkbox-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkbox-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkbox.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkmark-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkmark-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkmark-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkmark-done-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkmark-done-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkmark-done-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkmark-done-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkmark-done-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkmark-done.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkmark-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkmark-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\checkmark.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-back-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-back-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-back-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-back-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-back-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-back.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-down-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-down-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-down-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-down-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-down-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-down.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-forward-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-forward-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-forward-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-forward-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-forward-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-forward.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-up-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-up-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-up-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-up-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-up-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\chevron-up.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\clipboard-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\clipboard-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\clipboard.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\close-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\close-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\close-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\close-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\close-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\close.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-done-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-done-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-done.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-download-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-download-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-download.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-offline-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-offline-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-offline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-upload-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-upload-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud-upload.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloud.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloudy-night-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloudy-night-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloudy-night.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloudy-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloudy-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cloudy.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\code-download-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\code-download-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\code-download.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\code-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\code-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\code-slash-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\code-slash-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\code-slash.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\code-working-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\code-working-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\code-working.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\code.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cog-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cog-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cog.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\color-fill-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\color-fill-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\color-fill.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\color-filter-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\color-filter-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\color-filter.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\color-palette-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\color-palette-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\color-palette.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\color-wand-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\color-wand-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\color-wand.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\compass-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\compass-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\compass.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\construct-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\construct-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\construct.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\contract-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\contract-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\contract.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\contrast-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\contrast-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\contrast.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\copy-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\copy-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\copy.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\create-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\create-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\create.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\crop-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\crop-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\crop.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cube-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cube-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cube.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cut-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cut-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\cut.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\desktop-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\desktop-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\desktop.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\diamond-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\diamond-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\diamond.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\dice-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\dice-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\dice.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\disc-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\disc-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\disc.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\document-attach-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\document-attach-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\document-attach.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\document-lock-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\document-lock-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\document-lock.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\document-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\document-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\document-text-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\document-text-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\document-text.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\document.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\documents-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\documents-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\documents.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\download-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\download-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\download.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\duplicate-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\duplicate-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\duplicate.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ear-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ear-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ear.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\earth-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\earth-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\earth.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\easel-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\easel-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\easel.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\egg-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\egg-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\egg.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipse-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipse-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipse.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipsis-horizontal-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipsis-horizontal-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipsis-horizontal-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipsis-horizontal-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipsis-horizontal-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipsis-horizontal.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipsis-vertical-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipsis-vertical-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipsis-vertical-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipsis-vertical-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipsis-vertical-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ellipsis-vertical.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\enter-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\enter-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\enter.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\exit-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\exit-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\exit.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\expand-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\expand-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\expand.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\extension-puzzle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\extension-puzzle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\extension-puzzle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\eye-off-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\eye-off-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\eye-off.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\eye-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\eye-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\eye.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\eyedrop-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\eyedrop-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\eyedrop.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\fast-food-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\fast-food-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\fast-food.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\female-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\female-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\female.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\file-tray-full-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\file-tray-full-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\file-tray-full.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\file-tray-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\file-tray-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\file-tray-stacked-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\file-tray-stacked-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\file-tray-stacked.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\file-tray.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\film-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\film-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\film.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\filter-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\filter-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\filter-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\filter-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\filter-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\filter.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\finger-print-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\finger-print-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\finger-print.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\fish-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\fish-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\fish.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\fitness-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\fitness-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\fitness.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flag-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flag-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flag.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flame-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flame-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flame.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flash-off-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flash-off-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flash-off.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flash-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flash-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flash.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flashlight-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flashlight-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flashlight.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flask-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flask-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flask.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flower-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flower-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\flower.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\folder-open-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\folder-open-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\folder-open.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\folder-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\folder-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\folder.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\football-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\football-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\football.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\footsteps-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\footsteps-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\footsteps.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\funnel-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\funnel-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\funnel.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\game-controller-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\game-controller-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\game-controller.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\gift-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\gift-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\gift.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-branch-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-branch-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-branch.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-commit-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-commit-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-commit.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-compare-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-compare-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-compare.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-merge-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-merge-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-merge.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-network-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-network-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-network.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-pull-request-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-pull-request-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\git-pull-request.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\glasses-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\glasses-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\glasses.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\globe-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\globe-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\globe.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\golf-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\golf-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\golf.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\grid-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\grid-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\grid.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hammer-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hammer-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hammer.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hand-left-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hand-left-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hand-left.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hand-right-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hand-right-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hand-right.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\happy-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\happy-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\happy.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hardware-chip-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hardware-chip-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hardware-chip.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\headset-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\headset-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\headset.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-dislike-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-dislike-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-dislike-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-dislike-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-dislike-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-dislike.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-half-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-half-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-half.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\heart.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\help-buoy-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\help-buoy-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\help-buoy.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\help-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\help-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\help-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\help-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\help-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\help.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\home-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\home-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\home.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hourglass-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hourglass-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\hourglass.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ice-cream-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ice-cream-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ice-cream.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\id-card-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\id-card-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\id-card.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\image-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\image-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\image.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\images-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\images-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\images.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\infinite-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\infinite-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\infinite.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\information-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\information-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\information-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\information-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\information-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\information.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\invert-mode-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\invert-mode-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\invert-mode.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\journal-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\journal-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\journal.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\key-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\key-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\key.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\keypad-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\keypad-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\keypad.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\language-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\language-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\language.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\laptop-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\laptop-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\laptop.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\layers-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\layers-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\layers.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\leaf-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\leaf-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\leaf.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\library-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\library-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\library.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\link-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\link-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\link.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\list-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\list-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\list-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\list-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\list-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\list.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\locate-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\locate-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\locate.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\location-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\location-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\location.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\lock-closed-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\lock-closed-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\lock-closed.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\lock-open-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\lock-open-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\lock-open.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\log-in-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\log-in-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\log-in.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\log-out-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\log-out-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\log-out.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-alipay.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-amazon.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-amplify.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-android.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-angular.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-apple-appstore.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-apple-ar.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-apple.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-behance.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-bitbucket.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-bitcoin.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-buffer.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-capacitor.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-chrome.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-closed-captioning.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-codepen.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-css3.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-designernews.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-deviantart.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-discord.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-docker.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-dribbble.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-dropbox.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-edge.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-electron.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-euro.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-facebook.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-figma.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-firebase.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-firefox.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-flickr.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-foursquare.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-github.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-gitlab.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-google-playstore.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-google.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-hackernews.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-html5.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-instagram.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-ionic.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-ionitron.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-javascript.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-laravel.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-linkedin.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-markdown.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-mastodon.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-medium.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-microsoft.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-no-smoking.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-nodejs.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-npm.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-octocat.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-paypal.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-pinterest.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-playstation.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-pwa.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-python.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-react.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-reddit.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-rss.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-sass.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-skype.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-slack.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-snapchat.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-soundcloud.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-stackoverflow.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-steam.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-stencil.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-tableau.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-tiktok.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-tumblr.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-tux.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-twitch.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-twitter.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-usd.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-venmo.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-vercel.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-vimeo.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-vk.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-vue.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-web-component.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-wechat.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-whatsapp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-windows.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-wordpress.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-xbox.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-xing.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-yahoo.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-yen.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\logo-youtube.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\magnet-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\magnet-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\magnet.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mail-open-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mail-open-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mail-open.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mail-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mail-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mail-unread-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mail-unread-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mail-unread.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mail.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\male-female-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\male-female-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\male-female.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\male-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\male-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\male.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\man-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\man-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\man.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\map-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\map-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\map.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\medal-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\medal-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\medal.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\medical-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\medical-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\medical.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\medkit-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\medkit-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\medkit.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\megaphone-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\megaphone-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\megaphone.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\menu-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\menu-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\menu.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mic-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mic-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mic-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mic-off-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mic-off-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mic-off-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mic-off-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mic-off-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mic-off.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mic-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mic-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\mic.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\moon-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\moon-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\moon.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\move-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\move-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\move.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\musical-note-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\musical-note-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\musical-note.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\musical-notes-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\musical-notes-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\musical-notes.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\navigate-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\navigate-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\navigate-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\navigate-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\navigate-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\navigate.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\newspaper-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\newspaper-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\newspaper.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\notifications-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\notifications-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\notifications-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\notifications-off-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\notifications-off-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\notifications-off-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\notifications-off-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\notifications-off-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\notifications-off.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\notifications-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\notifications-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\notifications.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\nuclear-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\nuclear-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\nuclear.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\nutrition-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\nutrition-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\nutrition.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\open-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\open-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\open.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\options-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\options-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\options.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\paper-plane-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\paper-plane-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\paper-plane.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\partly-sunny-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\partly-sunny-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\partly-sunny.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pause-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pause-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pause-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pause-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pause-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pause.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\paw-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\paw-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\paw.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pencil-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pencil-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pencil.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\people-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\people-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\people-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\people-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\people-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\people.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\person-add-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\person-add-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\person-add.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\person-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\person-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\person-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\person-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\person-remove-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\person-remove-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\person-remove.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\person-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\person.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\phone-landscape-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\phone-landscape-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\phone-landscape.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\phone-portrait-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\phone-portrait-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\phone-portrait.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pie-chart-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pie-chart-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pie-chart.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pin-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pin-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pin.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pint-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pint-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pint.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pizza-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pizza-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pizza.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\planet-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\planet-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\planet.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-back-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-back-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-back-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-back-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-back-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-back.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-forward-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-forward-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-forward-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-forward-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-forward-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-forward.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-skip-back-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-skip-back-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-skip-back-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-skip-back-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-skip-back-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-skip-back.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-skip-forward-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-skip-forward-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-skip-forward-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-skip-forward-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-skip-forward-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play-skip-forward.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\play.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\podium-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\podium-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\podium.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\power-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\power-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\power.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pricetag-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pricetag-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pricetag.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pricetags-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pricetags-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pricetags.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\print-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\print-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\print.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\prism-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\prism-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\prism.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pulse-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pulse-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\pulse.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\push-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\push-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\push.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\qr-code-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\qr-code-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\qr-code.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\radio-button-off-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\radio-button-off-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\radio-button-off.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\radio-button-on-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\radio-button-on-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\radio-button-on.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\radio-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\radio-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\radio.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\rainy-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\rainy-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\rainy.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reader-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reader-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reader.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\receipt-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\receipt-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\receipt.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\recording-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\recording-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\recording.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\refresh-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\refresh-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\refresh-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\refresh-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\refresh-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\refresh.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reload-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reload-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reload-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reload-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reload-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reload.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\remove-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\remove-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\remove-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\remove-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\remove-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\remove.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reorder-four-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reorder-four-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reorder-four.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reorder-three-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reorder-three-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reorder-three.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reorder-two-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reorder-two-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\reorder-two.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\repeat-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\repeat-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\repeat.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\resize-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\resize-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\resize.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\restaurant-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\restaurant-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\restaurant.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\return-down-back-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\return-down-back-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\return-down-back.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\return-down-forward-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\return-down-forward-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\return-down-forward.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\return-up-back-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\return-up-back-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\return-up-back.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\return-up-forward-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\return-up-forward-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\return-up-forward.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ribbon-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ribbon-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ribbon.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\rocket-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\rocket-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\rocket.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\rose-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\rose-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\rose.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sad-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sad-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sad.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\save-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\save-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\save.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\scale-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\scale-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\scale.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\scan-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\scan-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\scan-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\scan-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\scan-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\scan.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\school-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\school-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\school.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\search-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\search-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\search-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\search-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\search-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\search.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\send-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\send-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\send.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\server-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\server-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\server.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\settings-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\settings-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\settings.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shapes-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shapes-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shapes.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\share-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\share-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\share-social-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\share-social-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\share-social.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\share.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shield-checkmark-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shield-checkmark-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shield-checkmark.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shield-half-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shield-half-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shield-half.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shield-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shield-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shield.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shirt-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shirt-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shirt.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shuffle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shuffle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\shuffle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\skull-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\skull-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\skull.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\snow-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\snow-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\snow.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sparkles-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sparkles-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sparkles.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\speedometer-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\speedometer-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\speedometer.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\square-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\square-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\square.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\star-half-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\star-half-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\star-half.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\star-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\star-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\star.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\stats-chart-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\stats-chart-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\stats-chart.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\stop-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\stop-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\stop-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\stop-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\stop-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\stop.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\stopwatch-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\stopwatch-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\stopwatch.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\storefront-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\storefront-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\storefront.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\subway-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\subway-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\subway.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sunny-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sunny-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sunny.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\swap-horizontal-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\swap-horizontal-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\swap-horizontal.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\swap-vertical-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\swap-vertical-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\swap-vertical.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sync-circle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sync-circle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sync-circle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sync-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sync-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\sync.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\tablet-landscape-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\tablet-landscape-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\tablet-landscape.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\tablet-portrait-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\tablet-portrait-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\tablet-portrait.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\telescope-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\telescope-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\telescope.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\tennisball-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\tennisball-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\tennisball.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\terminal-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\terminal-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\terminal.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\text-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\text-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\text.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\thermometer-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\thermometer-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\thermometer.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\thumbs-down-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\thumbs-down-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\thumbs-down.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\thumbs-up-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\thumbs-up-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\thumbs-up.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\thunderstorm-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\thunderstorm-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\thunderstorm.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ticket-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ticket-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ticket.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\time-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\time-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\time.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\timer-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\timer-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\timer.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\today-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\today-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\today.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\toggle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\toggle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\toggle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trail-sign-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trail-sign-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trail-sign.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\train-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\train-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\train.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\transgender-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\transgender-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\transgender.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trash-bin-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trash-bin-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trash-bin.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trash-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trash-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trash.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trending-down-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trending-down-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trending-down.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trending-up-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trending-up-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trending-up.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\triangle-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\triangle-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\triangle.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trophy-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trophy-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\trophy.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\tv-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\tv-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\tv.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\umbrella-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\umbrella-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\umbrella.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\unlink-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\unlink-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\unlink.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\videocam-off-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\videocam-off-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\videocam-off.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\videocam-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\videocam-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\videocam.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-high-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-high-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-high.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-low-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-low-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-low.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-medium-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-medium-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-medium.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-mute-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-mute-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-mute.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-off-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-off-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\volume-off.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\walk-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\walk-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\walk.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\wallet-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\wallet-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\wallet.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\warning-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\warning-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\warning.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\watch-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\watch-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\watch.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\water-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\water-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\water.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\wifi-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\wifi-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\wifi.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\wine-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\wine-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\wine.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\woman-outline.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\woman-sharp.svg" />
+    <Content Include="citizen\citizenassets\icon\ionicon\woman.svg" />
+    <Content Include="citizen\citizenassets\icon\mobile.png" />
+    <Content Include="citizen\citizenassets\images\about4.jpg" />
+    <Content Include="citizen\citizenassets\images\admin_logo.jpg" />
+    <Content Include="citizen\citizenassets\images\auth\logo-dark.png" />
+    <Content Include="citizen\citizenassets\images\auth\Logo-small-bottom.png" />
+    <Content Include="citizen\citizenassets\images\auth\logo.png" />
+    <Content Include="citizen\citizenassets\images\avatar-1.jpg" />
+    <Content Include="citizen\citizenassets\images\avatar-2.jpg" />
+    <Content Include="citizen\citizenassets\images\avatar-3.jpg" />
+    <Content Include="citizen\citizenassets\images\avatar-4.jpg" />
+    <Content Include="citizen\citizenassets\images\avatar-5.jpg" />
+    <Content Include="citizen\citizenassets\images\breadcrumb-bg.jpg" />
+    <Content Include="citizen\citizenassets\images\browser\chrome.png" />
+    <Content Include="citizen\citizenassets\images\browser\firefox.png" />
+    <Content Include="citizen\citizenassets\images\browser\ie.png" />
+    <Content Include="citizen\citizenassets\images\browser\opera.png" />
+    <Content Include="citizen\citizenassets\images\browser\safari.png" />
+    <Content Include="citizen\citizenassets\images\carouselsection\1_abt_ahmd.jpg" />
+    <Content Include="citizen\citizenassets\images\carouselsection\baner-cpgrams_1 %281%29.jpg" />
+    <Content Include="citizen\citizenassets\images\carouselsection\baner-cpgrams_3.jpg" />
+    <Content Include="citizen\citizenassets\images\carouselsection\baner-cpgrams_4.jpg" />
+    <Content Include="citizen\citizenassets\images\carouselsection\baner-cpgrams_5.jpg" />
+    <Content Include="citizen\citizenassets\images\citijen.jpg" />
+    <Content Include="citizen\citizenassets\images\citijenwhitebgremove.jpg" />
+    <Content Include="citizen\citizenassets\images\contact.png" />
+    <Content Include="citizen\citizenassets\images\favicon.ico" />
+    <Content Include="citizen\citizenassets\images\flashing_new.gif" />
+    <Content Include="citizen\citizenassets\images\flowChart.jpg" />
+    <Content Include="citizen\citizenassets\images\footer\digi-awards.jpg" />
+    <Content Include="citizen\citizenassets\images\footer\digital-india-logo.jpg" />
+    <Content Include="citizen\citizenassets\images\footer\gandhi-150.jpg" />
+    <Content Include="citizen\citizenassets\images\footer\india-gov-logo.jpg" />
+    <Content Include="citizen\citizenassets\images\footer\made-in-india.jpg" />
+    <Content Include="citizen\citizenassets\images\footer\niclogo.jpg" />
+    <Content Include="citizen\citizenassets\images\footer\web-directory.jpg" />
+    <Content Include="citizen\citizenassets\images\forgotimgadmin.png" />
+    <Content Include="citizen\citizenassets\images\happyadmin.png" />
+    <Content Include="citizen\citizenassets\images\icons\ico_about.png" />
+    <Content Include="citizen\citizenassets\images\icons\ico_contact.png" />
+    <Content Include="citizen\citizenassets\images\icons\ico_grievance.png" />
+    <Content Include="citizen\citizenassets\images\icons\ico_help.png" />
+    <Content Include="citizen\citizenassets\images\icons\ico_home.png" />
+    <Content Include="citizen\citizenassets\images\icons\ico_lock.png" />
+    <Content Include="citizen\citizenassets\images\icons\ico_nodal.png" />
+    <Content Include="citizen\citizenassets\images\icons\ico_redress.png" />
+    <Content Include="citizen\citizenassets\images\icons\ico_user.png" />
+    <Content Include="citizen\citizenassets\images\icons\ico_view %281%29.png" />
+    <Content Include="citizen\citizenassets\images\icons\ico_view.png" />
+    <Content Include="citizen\citizenassets\images\icons\mobile.png" />
+    <Content Include="citizen\citizenassets\images\logo-blue.png" />
+    <Content Include="citizen\citizenassets\images\logo.png" />
+    <Content Include="citizen\citizenassets\images\mega-menu\01.jpg" />
+    <Content Include="citizen\citizenassets\images\mega-menu\02.jpg" />
+    <Content Include="citizen\citizenassets\images\mega-menu\03.jpg" />
+    <Content Include="citizen\citizenassets\images\register.png" />
+    <Content Include="citizen\citizenassets\images\select-arrow.png" />
+    <Content Include="citizen\citizenassets\images\signIn.png" />
+    <Content Include="citizen\citizenassets\images\status.png" />
+    <Content Include="citizen\citizenassets\images\swachha.png" />
+    <Content Include="citizen\citizenassets\images\trycitijenwhitebgremove.jpg" />
+    <Content Include="citizen\citizenassets\images\user-bg.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\AUSTRALIA.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\BRAZIL.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\DIGITALPEN.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\GERMANY.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\IPAD.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\PHONE1.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\PHONE2.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\PHONE3.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\PHONE4.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\prod1.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\prod2.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\prod3.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\prod4.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\TABLET.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\UK.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\USA.jpg" />
+    <Content Include="citizen\citizenassets\images\widget\wather2bottom.png" />
+    <Content Include="citizen\citizenassets\images\widget\wather2m.png" />
+    <Content Include="citizen\citizenassets\images\widget\wather2star1.png" />
+    <Content Include="citizen\citizenassets\images\widget\wather2star2.png" />
+    <Content Include="citizen\citizenassets\images\widget\watherbottom.png" />
+    <Content Include="citizen\citizenassets\images\widget\wathernature.png" />
+    <Content Include="citizen\citizenassets\images\widget\watherstar1.png" />
+    <Content Include="citizen\citizenassets\images\widget\watherstar2.png" />
+    <Content Include="citizen\citizenassets\images\widget\wsm-3-star-1.png" />
+    <Content Include="citizen\citizenassets\images\widget\wsm-3-star-2.png" />
+    <Content Include="citizen\citizenassets\icon\fa-brands-400.svg" />
+    <Content Include="citizen\citizenassets\icon\fa-regular-400.svg" />
+    <Content Include="citizen\citizenassets\icon\fa-solid-900.svg" />
+    <Content Include="citizen\citizenassets\icon\feather\css\feather.css" />
+    <Content Include="citizen\citizenassets\icon\feather\fonts\feather.svg" />
+    <Content Include="citizen\citizenassets\icon\font-awesome\css\font-awesome.css" />
+    <Content Include="citizen\citizenassets\icon\font-awesome\css\font-awesome.min.css" />
+    <Content Include="citizen\citizenassets\icon\font-awesome\font-awesome-n.min.css" />
+    <Content Include="citizen\citizenassets\icon\font-awesome\font-awesome.min.css" />
+    <Content Include="citizen\citizenassets\icon\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="citizen\citizenassets\icon\fontawesome-webfont.svg" />
+    <Content Include="citizen\citizenassets\icon\icofont\css\icofont.css" />
+    <Content Include="citizen\citizenassets\icon\ionicons.svg" />
+    <Content Include="citizen\citizenassets\icon\Linearicons-Free.svg" />
+    <Content Include="citizen\citizenassets\icon\Simple-Line-Icons.svg" />
+    <Content Include="citizen\citizenassets\icon\themify-icons\fonts\themify.svg" />
+    <Content Include="citizen\citizenassets\icon\themify-icons\themify-icons.css" />
+    <Content Include="citizen\citizenassets\js\animation.js" />
+    <Content Include="citizen\citizenassets\js\bootstrap-growl.min.js" />
+    <Content Include="citizen\citizenassets\js\bootstrap\js\bootstrap.min.js" />
+    <Content Include="citizen\citizenassets\js\classie.js" />
+    <Content Include="citizen\citizenassets\js\color-json-common-page.js" />
+    <Content Include="citizen\citizenassets\js\common-pages.js" />
+    <Content Include="citizen\citizenassets\js\common-pages.min.js" />
+    <Content Include="citizen\citizenassets\js\counter.js" />
+    <Content Include="citizen\citizenassets\js\custome.js" />
+    <Content Include="citizen\citizenassets\js\float\curvedLines.js" />
+    <Content Include="citizen\citizenassets\js\float\jquery.flot.categories.js" />
+    <Content Include="citizen\citizenassets\js\float\jquery.flot.js" />
+    <Content Include="citizen\citizenassets\js\float\jquery.flot.pie.js" />
+    <Content Include="citizen\citizenassets\js\float\jquery.flot.tooltip.min.js" />
+    <Content Include="citizen\citizenassets\js\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="citizen\citizenassets\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="citizen\citizenassets\js\jquery.easypiechart.min.js" />
+    <Content Include="citizen\citizenassets\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="citizen\citizenassets\js\jquery.mousewheel.min.js" />
+    <Content Include="citizen\citizenassets\js\jquery.quicksearch.js" />
+    <Content Include="citizen\citizenassets\js\jquery\jquery.min.js" />
+    <Content Include="citizen\citizenassets\js\modal.js" />
+    <Content Include="citizen\citizenassets\js\modalEffects.js" />
+    <Content Include="citizen\citizenassets\js\modernizr\css-scrollbars.js" />
+    <Content Include="citizen\citizenassets\js\modernizr\modernizr.js" />
+    <Content Include="citizen\citizenassets\js\morris.js\morris.js" />
+    <Content Include="citizen\citizenassets\js\owl-custom.js" />
+    <Content Include="citizen\citizenassets\js\pcoded.min.js" />
+    <Content Include="citizen\citizenassets\js\popper.js\popper.min.js" />
+    <Content Include="citizen\citizenassets\js\raphael\raphael.min.js" />
+    <Content Include="citizen\citizenassets\js\rating.js" />
+    <Content Include="citizen\citizenassets\js\script.js" />
+    <Content Include="citizen\citizenassets\js\script.min.js" />
+    <Content Include="citizen\citizenassets\js\SmoothScroll.js" />
+    <Content Include="citizen\citizenassets\js\swiper-custom.js" />
+    <Content Include="citizen\citizenassets\js\vertical\horizontal-layout.min.js" />
+    <Content Include="citizen\citizenassets\js\vertical\menu\box-layout.js" />
+    <Content Include="citizen\citizenassets\js\vertical\menu\menu-compact.js" />
+    <Content Include="citizen\citizenassets\js\vertical\menu\menu-header-fixed.js" />
+    <Content Include="citizen\citizenassets\js\vertical\menu\menu-hori-fixed.js" />
+    <Content Include="citizen\citizenassets\js\vertical\menu\menu-rtl.js" />
+    <Content Include="citizen\citizenassets\js\vertical\menu\menu-sidebar-fixed.js" />
+    <Content Include="citizen\citizenassets\js\vertical\menu\menu-static.js" />
+    <Content Include="citizen\citizenassets\js\vertical\vertical-layout.js" />
+    <Content Include="citizen\citizenassets\js\vertical\vertical-layout.min.js" />
+    <Content Include="citizen\about.aspx" />
+    <Content Include="citizen\home.aspx" />
+    <Content Include="citizen\signup.aspx" />
+    <Content Include="citizen\contact.aspx" />
+    <Content Include="citizen\faq.aspx" />
+    <Content Include="citizen\signin.aspx" />
+    <Content Include="citizen\regcom.aspx" />
+    <Content Include="citizen\onlinecomstatus.aspx" />
+    <Content Include="citizen\feedback.aspx" />
+    <Content Include="citizen\complaintreopen.aspx" />
+    <Content Include="citizen\forgotpassword.aspx" />
+    <Content Include="citizen\complaintemail.aspx" />
+    <Content Include="citizen\complaintphone.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -241,6 +1776,13 @@
     <Compile Include="admin\admin.Master.designer.cs">
       <DependentUpon>admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="admin\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -248,6 +1790,238 @@
     <Compile Include="admin\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\alluser.aspx.cs">
+      <DependentUpon>alluser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\alluser.aspx.designer.cs">
+      <DependentUpon>alluser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Forgotform.aspx.cs">
+      <DependentUpon>Forgotform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Forgotform.aspx.designer.cs">
+      <DependentUpon>Forgotform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manageoperator.aspx.cs">
+      <DependentUpon>manageoperator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manageoperator.aspx.designer.cs">
+      <DependentUpon>manageoperator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\managedepartment.aspx.cs">
+      <DependentUpon>managedepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\managedepartment.aspx.designer.cs">
+      <DependentUpon>managedepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\adddepartment.aspx.cs">
+      <DependentUpon>adddepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\adddepartment.aspx.designer.cs">
+      <DependentUpon>adddepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\managezone.aspx.cs">
+      <DependentUpon>managezone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\managezone.aspx.designer.cs">
+      <DependentUpon>managezone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\addzone.aspx.cs">
+      <DependentUpon>addzone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\addzone.aspx.designer.cs">
+      <DependentUpon>addzone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manageward.aspx.cs">
+      <DependentUpon>manageward.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manageward.aspx.designer.cs">
+      <DependentUpon>manageward.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\addward.aspx.cs">
+      <DependentUpon>addward.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\addward.aspx.designer.cs">
+      <DependentUpon>addward.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manageproblems.aspx.cs">
+      <DependentUpon>manageproblems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manageproblems.aspx.designer.cs">
+      <DependentUpon>manageproblems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\addproblems.aspx.cs">
+      <DependentUpon>addproblems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\addproblems.aspx.designer.cs">
+      <DependentUpon>addproblems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\solvedcomplaint.aspx.cs">
+      <DependentUpon>solvedcomplaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\solvedcomplaint.aspx.designer.cs">
+      <DependentUpon>solvedcomplaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\managefeedback.aspx.cs">
+      <DependentUpon>managefeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\managefeedback.aspx.designer.cs">
+      <DependentUpon>managefeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\managefaq.aspx.cs">
+      <DependentUpon>managefaq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\managefaq.aspx.designer.cs">
+      <DependentUpon>managefaq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\addfaq.aspx.cs">
+      <DependentUpon>addfaq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\addfaq.aspx.designer.cs">
+      <DependentUpon>addfaq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\addsubdepartment.aspx.cs">
+      <DependentUpon>addsubdepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\addsubdepartment.aspx.designer.cs">
+      <DependentUpon>addsubdepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\approvedcomplaint.aspx.cs">
+      <DependentUpon>approvedcomplaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\approvedcomplaint.aspx.designer.cs">
+      <DependentUpon>approvedcomplaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\commaster.aspx.cs">
+      <DependentUpon>commaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\commaster.aspx.designer.cs">
+      <DependentUpon>commaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\reopencomplaint.aspx.cs">
+      <DependentUpon>reopencomplaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\reopencomplaint.aspx.designer.cs">
+      <DependentUpon>reopencomplaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\citizen.Master.cs">
+      <DependentUpon>citizen.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\citizen.Master.designer.cs">
+      <DependentUpon>citizen.Master</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\faq.aspx.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\faq.aspx.designer.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\signin.aspx.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\signin.aspx.designer.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\regcom.aspx.cs">
+      <DependentUpon>regcom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\regcom.aspx.designer.cs">
+      <DependentUpon>regcom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\onlinecomstatus.aspx.cs">
+      <DependentUpon>onlinecomstatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\onlinecomstatus.aspx.designer.cs">
+      <DependentUpon>onlinecomstatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\complaintreopen.aspx.cs">
+      <DependentUpon>complaintreopen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\complaintreopen.aspx.designer.cs">
+      <DependentUpon>complaintreopen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\forgotpassword.aspx.cs">
+      <DependentUpon>forgotpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\forgotpassword.aspx.designer.cs">
+      <DependentUpon>forgotpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\complaintemail.aspx.cs">
+      <DependentUpon>complaintemail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\complaintemail.aspx.designer.cs">
+      <DependentUpon>complaintemail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\complaintphone.aspx.cs">
+      <DependentUpon>complaintphone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\complaintphone.aspx.designer.cs">
+      <DependentUpon>complaintphone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GmailSender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -301,6 +2075,61 @@
     <Content Include="admin\assets\images\auth\Thumbs.db" />
     <Content Include="admin\assets\images\Thumbs.db" />
     <Content Include="admin\admin.Master" />
+    <Content Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </Content>
+    <Content Include="citizen\citizen.Master" />
+    <Content Include="citizen\citizenassets\images\auth\Thumbs.db" />
+    <Content Include="citizen\citizenassets\images\Thumbs.db" />
+    <Content Include="citizen\citizenassets\icon\CAW.TTF" />
+    <Content Include="citizen\citizenassets\icon\fa-brands-400.eot" />
+    <Content Include="citizen\citizenassets\icon\fa-brands-400.ttf" />
+    <Content Include="citizen\citizenassets\icon\fa-brands-400.woff" />
+    <Content Include="citizen\citizenassets\icon\fa-brands-400.woff2" />
+    <Content Include="citizen\citizenassets\icon\fa-regular-400.eot" />
+    <Content Include="citizen\citizenassets\icon\fa-regular-400.ttf" />
+    <Content Include="citizen\citizenassets\icon\fa-regular-400.woff" />
+    <Content Include="citizen\citizenassets\icon\fa-regular-400.woff2" />
+    <Content Include="citizen\citizenassets\icon\fa-solid-900.eot" />
+    <Content Include="citizen\citizenassets\icon\fa-solid-900.ttf" />
+    <Content Include="citizen\citizenassets\icon\fa-solid-900.woff" />
+    <Content Include="citizen\citizenassets\icon\fa-solid-900.woff2" />
+    <Content Include="citizen\citizenassets\icon\feather\fonts\feather.eot" />
+    <Content Include="citizen\citizenassets\icon\feather\fonts\feather.ttf" />
+    <Content Include="citizen\citizenassets\icon\feather\fonts\feather.woff" />
+    <Content Include="citizen\citizenassets\icon\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="citizen\citizenassets\icon\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="citizen\citizenassets\icon\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="citizen\citizenassets\icon\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="citizen\citizenassets\icon\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="citizen\citizenassets\icon\fontawesome-webfont.eot" />
+    <Content Include="citizen\citizenassets\icon\fontawesome-webfont.ttf" />
+    <Content Include="citizen\citizenassets\icon\fontawesome-webfont.woff" />
+    <Content Include="citizen\citizenassets\icon\fontawesome-webfont.woff2" />
+    <Content Include="citizen\citizenassets\icon\FontAwesome.otf" />
+    <Content Include="citizen\citizenassets\icon\icofont\fonts\icofont.eot" />
+    <Content Include="citizen\citizenassets\icon\icofont\fonts\icofont.ttf" />
+    <Content Include="citizen\citizenassets\icon\icofont\fonts\icofont.woff" />
+    <Content Include="citizen\citizenassets\icon\ionicons.eot" />
+    <Content Include="citizen\citizenassets\icon\ionicons.ttf" />
+    <Content Include="citizen\citizenassets\icon\ionicons.woff" />
+    <Content Include="citizen\citizenassets\icon\Linearicons-Free.eot" />
+    <Content Include="citizen\citizenassets\icon\Linearicons-Free.ttf" />
+    <Content Include="citizen\citizenassets\icon\Linearicons-Free.woff" />
+    <Content Include="citizen\citizenassets\icon\Linearicons-Free.woff2" />
+    <Content Include="citizen\citizenassets\icon\SEGOEUI.ttf" />
+    <Content Include="citizen\citizenassets\icon\SEGOEUIB.TTF" />
+    <Content Include="citizen\citizenassets\icon\segoeuii.ttf" />
+    <Content Include="citizen\citizenassets\icon\SEGOEUIZ.TTF" />
+    <Content Include="citizen\citizenassets\icon\Simple-Line-Icons.eot" />
+    <Content Include="citizen\citizenassets\icon\Simple-Line-Icons.ttf" />
+    <Content Include="citizen\citizenassets\icon\Simple-Line-Icons.woff" />
+    <Content Include="citizen\citizenassets\icon\Simple-Line-Icons.woff2" />
+    <Content Include="citizen\citizenassets\icon\themify-icons\fonts\themify.eot" />
+    <Content Include="citizen\citizenassets\icon\themify-icons\fonts\themify.ttf" />
+    <Content Include="citizen\citizenassets\icon\themify-icons\fonts\themify.woff" />
+    <Content Include="citizen\citizenassets\icon\ionicon\ionicons.designerpack.zip" />
+    <Content Include="App_LocalResources\.editorconfig" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -308,6 +2137,10 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="admin\COMPLAINT_IMAGES\" />
+    <Folder Include="complaintimages\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

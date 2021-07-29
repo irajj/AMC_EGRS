@@ -1,0 +1,342 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="citizen.master.cs" CodeFile="citizen.master.cs" Inherits="AMC_EGRS.citizen.citizen" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/fontawesome.min.js" integrity="sha512-KCwrxBJebca0PPOaHELfqGtqkUlFUCuqCnmtydvBSTnJrBirJ55hRG5xcP4R9Rdx9Fz9IF3Yw6Rx40uhuAHR8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/regular.min.js" integrity="sha512-jR9mIF29jOBsgismrZaiPV9H/VNWOpnILyA4MPEPgJFadfbWT0mQ5MnxCMd+JCYdoTuB2n1SkI00XkELU4ETmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/solid.min.js" integrity="sha512-Qc+cBMt/4/KXJ1F6nNQahXIsgPygHM4S2XWChoumV8qkpZ9oO+gBDBEpOxgbkQQ/6DlHx6cUxa5nBhEbuiR8xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Favicon icon -->
+    <link href="citizenassets/images/favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <%-- bootstrap css --%>
+    <link href="citizenassets/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%-- themify icon  --%>
+    <link href="citizenassets/icon/themify-icons/themify-icons.css" rel="stylesheet" />
+    <%-- Ionicons CDN--%>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <%-- font awesome css --%>
+    <link href="citizenassets/icon/font-awesome/font-awesome-n.min.css" rel="stylesheet" />
+    <link href="citizenassets/icon/font-awesome/font-awesome.min.css" rel="stylesheet" />
+    <%-- custome css --%>
+    <link href="citizenassets/css/custom.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%-- main body start here --%>
+        <div class="main">
+            <%-- topnav bar start  --%>
+            <div class="topbar">
+                <div class="container-fluid clearfix">
+                    <%-- left side start --%>
+                    <div class="tophead_left">
+                        <ul>
+                            <li class="gov">
+                                <span class="lang-hin">अहमदाबाद नगर निगम</span>
+                                <span>Ahmedabad Municipal Corporation</span>
+                            </li>
+                            <li class="ministry">
+                                <span class="lang-hin">व्यापक शिकायत निवारण प्रणाली</span>
+                                <span>extensive grievance redressal system</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <%-- left side End --%>
+                    <%-- right side start  --%>
+                    <div class="tophead_right">
+                        <ul class="top_row flex-row">
+                            <li>
+                                <a href="home.aspx" class="loginlinks">
+                                    <%-- back here from font awesome icon all right side --%>
+                                    <img src="citizenassets/images/icons/ico_home.png" />
+                                    <span class="hidden-sm-down">
+                                        <asp:Label ID="home" runat="server" Text="Home"></asp:Label>
+                                        
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact.aspx" class="loginlinks">
+                                    <img src="citizenassets/images/icons/ico_contact.png" />
+                                    <span class="hidden-sm-down"><i class=""></i>
+                                        <asp:Label ID="contact" runat="server" Text="Contact Us"></asp:Label>                                        
+                                    </span>
+                                </a>
+                            </li>
+                            <li><a href="about.aspx" class="loginlinks">
+                                <img src="citizenassets/images/icons/ico_about.png" />
+                                <span class="hidden-sm-down">
+                                    <asp:Label ID="OffAbout" runat="server" Text="About Us"></asp:Label>
+                                    
+
+                                </span></a></li>
+                            <li><a href="faq.aspx" class="loginlinks">
+                                <img src="citizenassets/images/icons/ico_help.png" />
+                                <span class="hidden-sm-down">
+                                    <asp:Label ID="faq" runat="server" Text="FAQs/Help"></asp:Label>
+                                    
+
+                                </span></a></li>
+                        </ul>
+                    </div>
+                    <%-- right side end --%>
+                </div>
+            </div>
+            <%-- topnavbar end --%>
+
+            <%-- head part start --%>
+            <div class="head">
+                <div class="container-fluid clearfix">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo" style="width: 400px">
+                            <a href="/">
+                                <%--<img src="/Images/iconHome/logo.png" alt="logo">--%></a>
+                            <%--<img src="citizenassets/images/citijen.jpg" width="400" />--%>
+                            <img src="citizenassets/images/trycitijenwhitebgremove.jpg" width="500" />
+                        </div>
+                        <div class="title-main">
+                            <h2>EGRS<sup class="pl-2"><span class="badge badge-danger glow"><small>New</small></span></sup></h2>
+                            <span>
+                                <asp:Label ID="EGRSLAN" runat="server" Text="Extensive Grievance Redressal System"></asp:Label>
+                                
+                            </span>
+                        </div>
+                        <div class="swachh">
+                            <img src="citizenassets/images/swachha.png" alt="swachha" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%-- head part end --%>
+
+            <%-- main navbar section mid part  --%>
+            <div class="main-navbar bg-dark">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-md navbar-dark  d-flex justify-content-between">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                            <ul class="navbar-nav">
+
+                                <%-- COMPLAINT REGISTRATION --%>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="thecity" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="/Images/ico_nodal.png" alt="">
+                                        <asp:Label ID="cregis" runat="server" Text="Complaint Registration"></asp:Label>                                        
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                        <a class="dropdown-item" href="regcom.aspx">
+                                            <asp:Label ID="c1on" runat="server" Text="Online"></asp:Label>                                            
+                                        </a>
+                                        <a class="dropdown-item" href="complaintemail.aspx">
+                                            <asp:Label ID="c2em" runat="server" Text="Through E-Mail"></asp:Label>
+                                        </a>
+                                        <a class="dropdown-item" href="complaintphone.aspx">
+                                            <asp:Label ID="c3ph" runat="server" Text="Thorugh Phone"></asp:Label>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <%-- RE-OPEN COMPLAINT --%>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="corporation" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="/Images/ico_nodal.png" alt="">
+                                        <asp:Label ID="roc" runat="server" Text="Re-Open Complaint"></asp:Label>                                        
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                        <a class="dropdown-item" href="complaintreopen.aspx">
+                                            <asp:Label ID="rocon" runat="server" Text="Online"></asp:Label>                                           
+                                        </a>
+                                        <%--<a  href="#">Thorught Phone</a>--%>
+                                    </div>
+                                </li>
+
+                                <%-- COMPLAINT STATUS --%>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="/Images/ico_redress.png" alt="">
+                                        <asp:Label ID="cs" runat="server" Text="Complaint Status"></asp:Label>                                        
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                                        <a class="dropdown-item" href="onlinecomstatus.aspx">
+                                            <asp:Label ID="cson" runat="server" Text="Online"></asp:Label>                                            
+                                        </a>
+                                        <%--<a class="dropdown-item" href="#">Thorught Phone</a>--%>
+                                    </div>
+                                </li>
+
+                                <%-- CITIZEN FEEDBACK--%>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="/Images/ico_grievance.png" alt="">
+                                        <asp:Label ID="cf" runat="server" Text="Citizen Feedback"></asp:Label>
+                                        
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                                        <a class="dropdown-item" href="feedback.aspx" >
+                                            <asp:Label ID="cff" runat="server" Text="Feedback"></asp:Label>
+
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <%-- SUPPORT --%>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="publicinformation" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <%--<img src="citizenassets/images/icons/ico_redress.png" alt="">--%>
+                                        <asp:Label ID="support" runat="server" Text="Support"></asp:Label>
+                                        
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                                        <a class="dropdown-item" href="about.aspx">
+                                            <asp:Label ID="supab" runat="server" Text="About Us"></asp:Label>                                            
+                                        </a>
+                                        <a class="dropdown-item" href="faq.aspx">
+                                            <asp:Label ID="supfaq" runat="server" Text="FAQS"></asp:Label>
+                                            
+                                        </a>
+                                        <a class="dropdown-item" href="contact.aspx">
+                                            <asp:Label ID="supcon" runat="server" Text="Contact Us"></asp:Label>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                        </div>
+                        <!-- Example split danger button -->
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span style="color: white;">
+                                    <asp:Label ID="officiallan" runat="server" Text="Choose Langauage"></asp:Label>                                    
+                                </span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                
+                                <asp:LinkButton ID="Englang" runat="server" class="dropdown-item" OnClick="Englang_Click">Eng</asp:LinkButton>
+                                <asp:LinkButton ID="HindiLang" runat="server" class="dropdown-item" OnClick="HindiLang_Click">Hindi</asp:LinkButton>
+                                
+                            </div>
+                        </div>
+
+                        <%-- user profile section --%>
+
+                        <ul class="navbar-nav" id="ardown" runat="server">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userwelcome" runat="server" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti-world"></i>Welcome
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown4" >
+                                <%--<asp:LinkButton PostBackUrl="home.aspx" CssClass="logoutbtn" ID="userprofile" runat="server"><i class="fas fa-user "></i>&nbsp;Profile</asp:LinkButton>--%>    
+                                    
+                                <asp:LinkButton PostBackUrl="home.aspx"  ID="userlogout" runat="server" style="color:black;" OnClick="userlogout_Click"><i class="fas fa-sign-out-alt "></i>&nbsp;Log out</asp:LinkButton>
+                                    <%--<a class="dropdown-item" href="#"></a>
+                                        <a class="dropdown-item" href="#"></a>
+                                        <a class="dropdown-item" href="#"></a>--%>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <%-- user profile section end --%>
+                        <%--<div class="signIn">--%>
+                            <%--<a class="btn btn-signIn" href="signin.aspx">
+                                <img src="citizenassets/images/signIn.png" />
+                                <span>Sign In</span>
+                            </a>--%>
+                        <%--</div>--%>
+                                <asp:LinkButton PostBackUrl="signin.aspx" CssClass="btn-login" ID="usersignsubmit" runat="server">
+                                    <asp:Label ID="signlan" runat="server" Text="Sign in "></asp:Label>                                    
+                                    &nbsp;<i class="ti-shift-right"></i></asp:LinkButton>
+                    </nav>
+                </div>
+            </div>
+            <%-- main navbar section mid part end --%>
+
+            <%--main content start here (MAIN SECTION)--%>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <%--  footer top start  --%>
+            <div class="footer-top">
+                <div class="copyright">
+                    <span>This site is designed, developed &amp; hosted by MCA : Raj Sharma, Nayan Ahir &amp; Meet Khalas</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="ad_image content">
+                    <a class="gov_logo" target="_blank" href="https://gandhi.gov.in/">
+                        <img src="citizenassets/images/footer/gandhi-150.jpg" alt="">
+                    </a>
+                    <br>
+                    <a class="indgov_logo" target="_blank" href="https://digitalindiaawards.gov.in">
+                        <img src="citizenassets/images/footer/digi-awards.jpg" alt="">
+                    </a>
+                    <a class="digi_logo" target="_blank" href="http://goidirectory.nic.in">
+                        <img src="citizenassets/images/footer/web-directory.jpg" alt="digital-India">
+                    </a>
+                    <br>
+                    <a class="digi_logo" target="_blank" href="http://www.makeinindia.com">
+                        <img src="citizenassets/images/footer/made-in-india.jpg" alt="nic">
+                    </a>
+                    <br>
+                    <a class="digi_logo" target="_blank" href="https://www.digitalindia.gov.in/">
+                        <img src="citizenassets/images/footer/digital-india-logo.jpg" alt="digital-India">
+                    </a>
+                    <br>
+                    <a class="indgov_logo" target="_blank" href="https://www.india.gov.in/">
+                        <img src="citizenassets/images/footer/india-gov-logo.jpg" alt="">
+                    </a>
+                    <br>
+                    <a class="digi_logo" target="_blank" href="https://www.nic.in/">
+                        <img src="citizenassets/images/footer/niclogo.jpg" alt="nic">
+                    </a>
+                </div>
+                <p>
+                    <span class="disc">
+                        <a href="/Home/Disclaimer">
+                            <span style="color: black;">Disclaimer</span>
+                        </a>
+                        <a href="/Home/WebsitePolicies" style="color: black;">Website Policies</a>
+                        <a href="https://darpg.gov.in/web-information-manager" target="_blank" style="color: black;">Web Information Manager</a>
+                    </span>Version 1.0.02062021.0.0, Copyright ©  2021
+                </p>
+
+
+            </div>
+            <%--main content ENDhere (MAIN SECTION)--%>
+        </div>
+        <%-- main body end here --%>
+    </form>
+    <%-- content part start --%>
+
+    <%-- content part End--%>
+
+    <%-- external js link start here --%>
+    <script src="citizenassets/js/jquery/jquery.min.js"></script>
+    <script src="citizenassets/js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="citizenassets/js/popper.js/popper.min.js"></script>
+    <script src="citizenassets/js/bootstrap/js/bootstrap.min.js"></script>
+    <!-- jquery slimscroll js -->
+    <script src="citizenassets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- slimscroll js -->
+    <script src="citizenassets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- menu js -->
+    <script src="citizenassets/js/pcoded.min.js"></script>
+    <script src="citizenassets/js/vertical/vertical-layout.js"></script>
+
+</body>
+</html>
+
