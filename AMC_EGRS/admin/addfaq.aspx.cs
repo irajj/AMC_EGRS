@@ -31,10 +31,7 @@ namespace AMC_EGRS.admin
             {
                 // Your code here
             }
-            if (Session["admin"] == null)
-            {
-                Response.Redirect("AdminLogin.aspx");
-            }
+            
         }
 
         protected void addlink1_Click(object sender, EventArgs e)

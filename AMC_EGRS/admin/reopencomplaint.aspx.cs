@@ -28,10 +28,6 @@ namespace AMC_EGRS.admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["admin"] == null)
-            {
-                Response.Redirect("AdminLogin.aspx");
-            }
         }
 
         protected void btnsolvedreopen_Click(object sender, EventArgs e)

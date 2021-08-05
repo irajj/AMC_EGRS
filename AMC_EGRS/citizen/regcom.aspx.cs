@@ -57,9 +57,14 @@ namespace AMC_EGRS.citizen
         {
             if (!IsPostBack)
             {
-                fillward();
-                fillpro();
+                if (Session["user"] != null)
+                {
+                    UserLoginpanel.Visible = false;
+                    complaintpanel.Visible = true;
+                }
             }
+            fillward();
+            fillpro();
         }
 
         protected void usrsubmit_Click(object sender, EventArgs e)
@@ -103,6 +108,16 @@ namespace AMC_EGRS.citizen
             {
                 Response.Write("<script>alert('Please COntact Your Network Oprator')</script>");
             }
+        }
+
+        protected void without_login_Click(object sender, EventArgs e)
+        {
+            UserLoginpanel.Visible = false;
+            complaintpanel.Visible = true;
+        }
+        protected void signinbtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("signin.aspx?regcom=user");
         }
     }
 }

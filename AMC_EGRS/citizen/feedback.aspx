@@ -17,13 +17,13 @@
                     <div class="col-md-12">
                         <asp:Label ID="Label1" runat="server" Text="Email Address. :" CssClass="col-12 col-md-12 font-weight-bold  required p-0"></asp:Label>
                         <asp:TextBox ID="usremailfeed" AutoCompleteType="Disabled" runat="server" CssClass="form-control col-12 col-md-12" MaxLength="50" TextMode="Email"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please Enter your email" ForeColor="Red" ControlToValidate="usremailfeed"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please Enter your email" ForeColor="Red" ControlToValidate="usremailfeed" ValidationGroup="fb"></asp:RequiredFieldValidator>
                     <br />
                     </div>
                     <div class="col-md-12">
                         <asp:Label ID="txtrefname" runat="server" Text="Complaint No. :" CssClass="col-12 col-md-12 font-weight-bold  required p-0"></asp:Label>
                         <asp:TextBox ID="usecomfeed" AutoCompleteType="Disabled" runat="server" CssClass="form-control col-12 col-md-12" MaxLength="50" TextMode="Number"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter Complaint number" ControlToValidate="usecomfeed" ForeColor="Red" ></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter Complaint number" ControlToValidate="usecomfeed" ForeColor="Red" ValidationGroup="fb" ></asp:RequiredFieldValidator>
                         <br />
                     </div>
                     <div class="col-md-12">
@@ -34,10 +34,11 @@
                                             <asp:ListItem>Work done but not satisfied (કામ થયેલ છે.પણ સંતોષકારક નથી.)</asp:ListItem>
                                             <asp:ListItem>Work not done (કામ થયેલ નથી.)</asp:ListItem>
                        </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="reqdropfeedback" ErrorMessage="please select feedback category" ControlToValidate="dropfeedback" runat="server" ForeColor="Red" InitialValue="---Select Complaint Category---" ValidationGroup="fb" />
                         <br />
                     </div>
                     <div class="col-md-12">
-                        <asp:Label ID="remarks" runat="server" Text="Remarks :" CssClass="col-12 col-md-12 font-weight-bold  required p-0"></asp:Label>                    
+                        <asp:Label ID="remarks" runat="server" Text="Remarks :" CssClass="col-12 col-md-12 font-weight-bold   p-0"></asp:Label>                    
                         <asp:TextBox ID="txtremarks" AutoCompleteType="Disabled" runat="server" CssClass="form-control col-12 col-md-12" MaxLength="250" TextMode="MultiLine"></asp:TextBox>
                         <br />
                     </div>
@@ -49,7 +50,7 @@
                                 <center>
                                     
                                     <%--<asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-info">SUBMIT</asp:LinkButton>--%>
-                                        <asp:LinkButton ID="usrfeedsubmit" runat="server" CssClass="btn-danger usrbtnsubmit" OnClick="usrfeedsubmit_Click"  ><i class="ti-save"></i>&nbsp;SUBMIT</asp:LinkButton>
+                                        <asp:LinkButton ID="usrfeedsubmit" runat="server" CssClass="btn-danger usrbtnsubmit" OnClick="usrfeedsubmit_Click" ValidationGroup="fb"  ><i class="ti-save"></i>&nbsp;SUBMIT</asp:LinkButton>
 
                                         &nbsp;                
                                         <button type="reset" class="btnreset">

@@ -4,7 +4,31 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container container-overflow-low-xs" style="border-radius: 5px; background-color: #C0C0C0;">
+    <asp:Panel ID="UserLoginpanel" runat="server" Visible="True">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Please Sign in first</h1>
+                    <br />
+                </div>                
+                <div class="col-6">
+                    <asp:LinkButton runat="server" ID="signinbtn" OnClick="signinbtn_Click">
+                        <h4 class="float-left">Sign-in here</h4>
+                    </asp:LinkButton>                   
+                </div>
+                <div class="col-6">
+                    <asp:LinkButton runat="server" id="without_login" OnClick="without_login_Click">
+                    <h4 class="float-right">Lodge Grievance without Signin</h4>
+                    </asp:LinkButton>  
+                        
+                </div>
+                
+            </div>
+
+        </div>
+    </asp:Panel>
+    <asp:Panel ID="complaintpanel" runat="server" Visible="False" >
+            <div class="container container-overflow-low-xs" style="border-radius: 5px; background-color: #C0C0C0;">
         <div class="widget-top-title-2 container container-palette" style="background-color: #C0C0C0">
             <div class="color-secondary">
                 <div class="bg-mask">
@@ -33,21 +57,20 @@
                                 <h4>Online Complaint registration</h4>
                                 
                                 <div class="control-group">
-                                    <label class="control-label">Select Ward</label>
+                                    <label class="control-label required">Select Ward</label>
                                     <div class="controls">
                                         <asp:DropDownList ID="dropward2" CssClass="form-control" runat="server">
-                                            <asp:ListItem Text="---please select ward---" />
                                         </asp:DropDownList>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please Select Ward" ForeColor="Red" ControlToValidate="dropward2" InitialValue="---please select ward---" ValidationGroup="regcom"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please Select Ward" ForeColor="Red" ControlToValidate="dropward2" InitialValue="0" ValidationGroup="regcom"></asp:RequiredFieldValidator>
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">Problem</label>
+                                    <label class="control-label required">Problem</label>
                                     <div class="controls">
                                         <asp:DropDownList ID="droppro2" CssClass="form-control" runat="server">
                                             
                                         </asp:DropDownList>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Please Select Problem" ForeColor="Red" InitialValue="---select problem---" ValidationGroup="regcom" ControlToValidate="droppro2"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Please Select Problem" ForeColor="Red" InitialValue="0" ValidationGroup="regcom" ControlToValidate="droppro2"></asp:RequiredFieldValidator>
                                     </div>
                                 </div>
                             </div>
@@ -56,14 +79,14 @@
                                 <hr />
                                 <h4 class="">Contact Person Details</h4>
                                 <div class="control-group ">
-                                    <label class="control-label">Citizen Name</label>
+                                    <label class="control-label required">Citizen Name</label>
                                     <div class="controls">
                                         <asp:TextBox ID="txtname" CssClass="form-control" runat="server"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtname" runat="server" ErrorMessage="please enter name" ForeColor="Red" ValidationGroup="regcom"></asp:RequiredFieldValidator>
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">Citizen Mobile Number</label>
+                                    <label class="control-label required">Citizen Mobile Number</label>
                                     <div class="controls">
                                         <asp:TextBox ID="txtcontno"  CssClass="form-control" runat="server" maxlength="10"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtcontno" runat="server" ErrorMessage="please enter your contact number" ForeColor="Red" ValidationGroup="regcom"></asp:RequiredFieldValidator>
@@ -71,14 +94,15 @@
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">Email-Id</label>
+                                    <label class="control-label required">Email-Id</label>
                                     <div class="controls">
                                         <asp:TextBox ID="txtemail" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="please Enter Email" ControlToValidate="txtemail" ForeColor="Red" ValidationGroup="regcom" ></asp:RequiredFieldValidator>
                                         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Email isn't in right format" ControlToValidate="txtemail" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="regcom"></asp:RegularExpressionValidator>
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">Address</label>
+                                    <label class="control-label required">Address</label>
                                     <div class="controls">
                                         <asp:TextBox ID="txtaddress" CssClass="form-control" runat="server" TextMode="MultiLine"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please enter your Address" ControlToValidate="txtaddress" ForeColor="Red" ValidationGroup="regcom"></asp:RequiredFieldValidator>
@@ -114,16 +138,18 @@
                                 </div>
                                 <div class="row mt-4">
                                     <div class="input-group">
-                                        <div class="col-12 col-md-6">
-                                            <label class="control-label">Title</label>
-
-                                            <span>To upload photo </span>
+                                        <div class="col-6 col-md-5">
+                                            <label class="control-label required">Title To upload photo </label>                                            
                                             <asp:TextBox ID="Txttitle" runat="server"></asp:TextBox>
+                                            <br />
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please select title" ValidationGroup="regcom" ControlToValidate="Txttitle" ForeColor="Red"></asp:RequiredFieldValidator>
                                         </div>
-                                        <div class="col-12 col-md-6">
+                                        <div class="col-6 col-md-7 required">
                                             <asp:FileUpload ID="FileUpload1" runat="server" />
-                                            <asp:Button ID="btnfileupload" runat="server" Text="UPLOAD"  />
+                                            <%--<asp:Button ID="btnfileupload" runat="server" Text="UPLOAD"  />--%>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="please upload photo" ControlToValidate="FileUpload1" ValidationGroup="regcom" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
                                         </div>
+                                            
                                     </div>
                                 </div>
                             </div>
@@ -147,4 +173,6 @@
             </div>
         </div>
     </div>
+
+    </asp:Panel>
 </asp:Content>

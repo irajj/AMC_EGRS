@@ -84,8 +84,9 @@ namespace AMC_EGRS.citizen
             da.Fill(ds);                                 
             cmd.ExecuteNonQuery();
             con.Close();
-            Response.Write("<script>alert('Complaint Re-opened Succesfully')</script>");
-
+            //Response.Write("<script>alert('Complaint Re-opened Succesfully')</script>");
+            Response.Write(@"<script language='javascript'>alert('Complaint Re-opened Succesfully 🙌🙌🙌 : \n" + "Please Check you E-Mail" + " .');window.location.href='home.aspx';</script>");
+            //Response.Redirect("home.aspx");
 
         }
     }

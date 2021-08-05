@@ -1,10 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/citizen/citizen.Master" AutoEventWireup="true" CodeBehind="signup.aspx.cs" Inherits="AMC_EGRS.citizen.WebForm3" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/citizen/citizen.Master" AutoEventWireup="true" CodeBehind="register.aspx.cs" CodeFile="register.aspx.cs" Inherits="AMC_EGRS.citizen.WebForm6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <title>AMC-EGRS: Register here</title>
+    <title>AMC-EGRS: Register here</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container-fluid">
+        <div class="container-fluid">
         <div class="card card-info">
             <h4 class="card-title ">Registration/sign up form</h4>
         </div>
@@ -64,7 +63,9 @@
                                         <asp:RadioButton GroupName="sex" ID="otherbtn" runat="server" CssClass="Space" Text="Other" />
                                     </div>
                                 </div>--%>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Please Select gender" ValidationGroup="signup" ControlToValidate="UserGen" ForeColor="#FF3300" Display="Dynamic"></asp:RequiredFieldValidator>
                             </fieldset>
+
                         </div>
                     </div>
                 </div>
@@ -73,7 +74,6 @@
                     <div class="form-group">
                         <asp:Label ID="Label1" runat="server" Text="Email" CssClass="col-12 col-md-12 font-weight-bold  required p-0" for="name"></asp:Label>
                         <asp:TextBox ID="usremail" AutoCompleteType="Disabled" runat="server" CssClass="form-control col-12 col-md-12" MaxLength="50" TextMode="Email"></asp:TextBox>
-                        <%--<asp:TextBox ID="TextBox1" AutoCompleteType="Disabled" runat="server" CssClass="form-control col-12 col-md-12" MaxLength="50"></asp:TextBox>--%>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ValidationGroup="signup" ErrorMessage="Please Enter Your Name" ForeColor="#FF3300" ControlToValidate="usremail"></asp:RequiredFieldValidator>
                     </div>
                 </div>
@@ -94,7 +94,8 @@
                     <div class="form-group">
                         <asp:Label ID="pslbl" runat="server" Text="password" CssClass="col-12 col-md-12 font-weight-bold  required p-0" for="password"></asp:Label>
                         <asp:TextBox ID="userpswd" AutoCompleteType="Disabled" runat="server" CssClass="form-control col-12 col-md-12" MaxLength="50" TextMode="Password"></asp:TextBox>
-                        <%--<asp:TextBox ID="TextBox1" AutoCompleteType="Disabled" runat="server" CssClass="form-control col-12 col-md-12" MaxLength="50"></asp:TextBox>--%>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ForeColor="#FF3300" ErrorMessage="Please Enter Password" ValidationGroup="signup" ControlToValidate="userpswd"></asp:RequiredFieldValidator>
+                        
                     </div>
                 </div>
                 <%-- confirm password --%>
@@ -102,19 +103,20 @@
                     <div class="form-group">
                         <asp:Label ID="usrcps" runat="server" Text="confirm  password" CssClass="col-12 col-md-12 font-weight-bold  required p-0" for="password"></asp:Label>
                         <asp:TextBox ID="usercpswd" AutoCompleteType="Disabled" runat="server" CssClass="form-control col-12 col-md-12" MaxLength="50" TextMode="Password"></asp:TextBox>
-                        <%--<asp:TextBox ID="TextBox1" AutoCompleteType="Disabled" runat="server" CssClass="form-control col-12 col-md-12" MaxLength="50"></asp:TextBox>--%>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ForeColor="#FF3300" ErrorMessage="Please Enter Confirm password" ValidationGroup="signup" ControlToValidate="usercpswd"></asp:RequiredFieldValidator>
+                        <br />
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Those passwords didn’t match. Try again." ForeColor="#FF3300" ValidationGroup="signup"  ControlToValidate="usercpswd" ControlToCompare="userpswd"></asp:CompareValidator>
                     </div>
                 </div>
 
                 <%-- btns --%>
                 <div class="col-6 col-md-12 text-center mt-2">
 
-                    <asp:LinkButton ID="usrsubmit" runat="server" CssClass="btn-danger usrbtnsubmit" OnClick="usrsubmit_Click" ValidationGroup="signup"><i class="ti-save"></i>&nbsp;Save</asp:LinkButton>
+                    <asp:LinkButton ID="ussrregister" runat="server" CssClass="btn-danger usrbtnsubmit"  ValidationGroup="signup" OnClick="ussrregister_Click"><i class="ti-save"></i>&nbsp;Save</asp:LinkButton>
                     <%--<asp:LinkButton ID="usrreset" runat="server" CssClass="btn-danger usrbtnsubmit" OnClick="usrreset_Click"><i class="ti-reload"></i>&nbsp;Reset</asp:LinkButton>--%>
                     
                     <button type="reset" class="btnreset">
-                        <i class="ti-reload"></i>&nbsp;Reset
-                    </button>
+                        <i class="ti-reload"></i>&nbsp;Reset</button>
 
                 </div>
 
@@ -122,4 +124,5 @@
             </div>
         </div>
     </div>
+
 </asp:Content>

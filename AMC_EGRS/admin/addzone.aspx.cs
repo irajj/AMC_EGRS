@@ -26,10 +26,7 @@ namespace AMC_EGRS.admin
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["admin"] == null)
-            {
-                Response.Redirect("AdminLogin.aspx");
-            }
+           
         }
 
         protected void zonesavebtn_Click(object sender, EventArgs e)
@@ -41,7 +38,7 @@ namespace AMC_EGRS.admin
             con.Close();
             txtzone.Text = "";
             Response.Write("<script>alert('Zone Inserted Succesfully 😌😌😌')</script>");
-            
+
         }
     }
 }

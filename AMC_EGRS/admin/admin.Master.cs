@@ -226,12 +226,10 @@ namespace AMC_EGRS.admin
 
         protected void AdLogout_Click(object sender, EventArgs e)
         {
-            HttpCookie adminlogin = new HttpCookie("login");
-            
+            HttpCookie adminlogin = new HttpCookie("login");            
             adminlogin.Expires = System.DateTime.Now.AddDays(-7);
             Response.Cookies.Add(adminlogin);   
-
-            Response.Redirect("AdminLogin.aspx");
+            Response.Redirect("AdminLogin.aspx");            
         }
     }
 }

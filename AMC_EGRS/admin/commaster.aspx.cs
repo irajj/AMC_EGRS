@@ -26,10 +26,7 @@ namespace AMC_EGRS.admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["admin"] == null)
-            {
-                Response.Redirect("AdminLogin.aspx");
-            }
+           
         }
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -64,7 +61,7 @@ namespace AMC_EGRS.admin
             con.Close();
 
             string msg = "";
-            msg = "Hey " + name + "🙋‍ 🙋‍ <br><br>“ We Are extremely Happy to Inform you that Your complaint has been successfullt Approved. 🤗🤗🤗  <br> <br><br>Thank you in advance for your patience! <br> Have a Great day! 😃😃 <br> Team Egrs";
+            msg = "Hey " + name + "🙋‍ 🙋‍ <br><br>“ We Are extremely Happy to Inform you that Your complaint has been successfully Approved. 🤗🤗🤗  <br> <br><br>Thank you in advance for your patience! <br> Have a Great day! 😃😃 <br> Team Egrs";
             if (GmailSender.SendMail(email, "EGRS TEAM: ABOUT YOUR COMPLAINT STATUS", msg))
             {
                 Response.Write("<script>alert('Client Complaint approved Successfully');window.location.href='commaster.aspx'</script>");

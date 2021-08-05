@@ -40,11 +40,11 @@
                         <div class="col-md-12">
                             <asp:Label ID="Label1" runat="server" Text="Email ID.:" CssClass="col-12 col-md-12 font-weight-bold  required p-0"></asp:Label>
                             <asp:TextBox ID="useremailtxt" runat="server" CssClass="form-control col-12 col-md-12" MaxLength="50"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="please enter email" ControlToValidate="useremailtxt"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="please enter email" ControlToValidate="useremailtxt" ForeColor="Red" ValidationGroup="comstatus"></asp:RequiredFieldValidator>
                             <br />
                             <asp:Label ID="txtrefid" runat="server" Text="Complaint No. :" CssClass="col-12 col-md-12 font-weight-bold  required p-0" for="password"></asp:Label>
                             <asp:TextBox ID="usercomno" AutoCompleteType="Disabled" runat="server" CssClass="form-control col-12 col-md-12" MaxLength="50" TextMode="Number"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="please enter complaint" ControlToValidate="usercomno"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="please enter complaint number"  ControlToValidate="usercomno" ForeColor="Red" ValidationGroup="comstatus"></asp:RequiredFieldValidator>
 
                             <br />
                         </div>
@@ -53,7 +53,7 @@
                     <div class="control-group">
                         <div class="controls">
                             <center>
-                                <asp:LinkButton ID="usrsubmit" runat="server" CssClass="btn-danger usrbtnsubmit" OnClick="usrsubmit_Click"><i class="ti-search"></i>&nbsp;Search</asp:LinkButton>
+                                <asp:LinkButton ID="usrsubmit" runat="server" CssClass="btn-danger usrbtnsubmit" OnClick="usrsubmit_Click" ValidationGroup="comstatus"><i class="ti-search"></i>&nbsp;Search</asp:LinkButton>
                                 <button type="reset" class="btnreset">
                                     <i class="ti-reload"></i>&nbsp;Reset</button>
                             </center>

@@ -241,7 +241,7 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown4" >
                                 <%--<asp:LinkButton PostBackUrl="home.aspx" CssClass="logoutbtn" ID="userprofile" runat="server"><i class="fas fa-user "></i>&nbsp;Profile</asp:LinkButton>--%>    
                                     
-                                <asp:LinkButton PostBackUrl="home.aspx"  ID="userlogout" runat="server" style="color:black;" OnClick="userlogout_Click"><i class="fas fa-sign-out-alt "></i>&nbsp;Log out</asp:LinkButton>
+                                <asp:LinkButton  ID="userlogout" runat="server" style="color:black;" OnClick="userlogout_Click"><i class="fas fa-sign-out-alt "></i>&nbsp;Log out</asp:LinkButton>
                                     <%--<a class="dropdown-item" href="#"></a>
                                         <a class="dropdown-item" href="#"></a>
                                         <a class="dropdown-item" href="#"></a>--%>

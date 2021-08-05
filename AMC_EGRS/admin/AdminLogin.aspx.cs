@@ -47,7 +47,8 @@ namespace AMC_EGRS.admin
 
         protected void SignAd_Click(object sender, EventArgs e)
         {
-            
+                    Session["admin"] = AdminEmail.Text;
+
             mycon();
             cmd = new SqlCommand("select admin_id,admin_name,admin_password from admin_master where admin_name=@nm and admin_password=@ps", con);
             cmd.Parameters.AddWithValue("@nm", AdminEmail.Text);

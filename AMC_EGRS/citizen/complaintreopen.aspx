@@ -19,21 +19,21 @@
                         <div class="col-md-12 col-12">
                             <span id="ContentPlaceHolder1_txtref" class="col-12 col-md-12 font-weight-bold  required p-0" for="password">Email. :</span>
                             <asp:TextBox ID="useremailreopen" runat="server" autocomplete="off" MaxLength="50" class="form-control col-12 col-md-12"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter your email" ControlToValidate="useremailreopen" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ValidationGroup="comreopen" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter your email" ControlToValidate="useremailreopen" ForeColor="Red" ></asp:RequiredFieldValidator>
 
                             <br>
                         </div>
                         <div class="col-md-12 col-12">
                             <span id="ContentPlaceHolder1_tx" class="col-12 col-md-12 font-weight-bold  required p-0" for="password">Complaint No. :</span>
                             <asp:TextBox ID="usernoreopen" runat="server" autocomplete="off" MaxLength="50" class="form-control col-12 col-md-12"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="please enter your complaint number" ControlToValidate="usernoreopen" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ValidationGroup="comreopen" ID="RequiredFieldValidator2" runat="server" ErrorMessage="please enter your complaint number" ControlToValidate="usernoreopen" ForeColor="Red"></asp:RequiredFieldValidator>
 
                             <br>
                         </div>
                         <br>
                     </div>
                     <div class="col-6 col-md-12 text-center mt-2">
-                        <asp:LinkButton ID="reopenbtn" runat="server" CssClass="btn-danger usrbtnsubmit" OnClick="reopenbtn_Click"><i class="ti-unlock"></i>&nbsp;Click here for Re-complaint</asp:LinkButton>
+                        <asp:LinkButton ID="reopenbtn" runat="server" ValidationGroup="comreopen" CssClass="btn-danger usrbtnsubmit" OnClick="reopenbtn_Click"><i class="ti-unlock"></i>&nbsp;Click here for Re-complaint</asp:LinkButton>
                     </div>
 
                 </div>

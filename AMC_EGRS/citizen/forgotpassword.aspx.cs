@@ -33,14 +33,14 @@ namespace AMC_EGRS.citizen
         protected void forgotbtn_Click(object sender, EventArgs e)
         {
             mycon();
-            cmd = new SqlCommand("select user_email from user_master where user_email=@em", con);
+            cmd = new SqlCommand("select c_email from citizen_master where c_email=@em", con);
             cmd.Parameters.AddWithValue("@em", UserForgotEmail.Text);
             da = new SqlDataAdapter(cmd);
             ds = new DataSet();
             da.Fill(ds);
             if (ds.Tables[0].Rows.Count > 0)
             {
-                if (ds.Tables[0].Rows[0]["user_email"].ToString() == UserForgotEmail.Text)
+                if (ds.Tables[0].Rows[0]["c_email"].ToString() == UserForgotEmail.Text)
                 {
                     string msg = "";
                     string fotp = "";
@@ -72,14 +72,14 @@ namespace AMC_EGRS.citizen
         {
             if (OTpusertxt.Text == Session["forgototp"].ToString())
             {
-                Response.Write("<script>alert('Your OTP succesfully matched now change the password')</script>");
+                Response.Write("<script>alert('Now..You are authorized person...you can change your password')</script>");
                 forgotpasswordpanel.Visible = false;
                 verifypanel.Visible = false;
                 changepassword.Visible = true;
             }
             else
             {
-                Response.Write("<script>alert('Please Enter Correct OTP')</script>");
+                Response.Write("<script>alert('Please Enter OTP Which we just sent you in moment ago')</script>");
             }
 
         }
@@ -87,7 +87,7 @@ namespace AMC_EGRS.citizen
         protected void submitpassword_Click(object sender, EventArgs e)
         {
             mycon();
-            cmd = new SqlCommand("update user_master set user_password=@up where user_email=@ue",con);
+            cmd = new SqlCommand("update citizen_master set c_password=@up where c_email=@ue",con);
             cmd.Parameters.AddWithValue("@up",userfgpassword.Text);
             cmd.Parameters.AddWithValue("@ue",UserForgotEmail.Text);
             da = new SqlDataAdapter(cmd);
@@ -96,15 +96,15 @@ namespace AMC_EGRS.citizen
             cmd.ExecuteNonQuery();
             con.Close();
             string msg = "";
-            msg = "The password for your EGRS Account: <b> " + UserForgotEmail.Text + "</b> was recentaly changed <br><br> Thank you <br> team EGRS";
+            msg = "The password for your EGRS Account: <b> " + UserForgotEmail.Text + "</b> was recently changed <br><br> Thank you <br> team EGRS";
             if (GmailSender.SendMail(UserForgotEmail.Text, "Team EGRS: Account Notification", msg))
-            {
+            {                
+                Response.Write("<script>alert('Your password Changed Sucessfully 🔥🔥🔥')</script>");
                 Response.Redirect("signin.aspx");
-                Response.Write("<script>alert('Your password Chnaged Sucessfully 🔥🔥🔥')</script>");
             }
             else
             {
-                Response.Write("<script>alert('Please check youe internet')</script>");
+                Response.Write("<script>alert('Please check your internet')</script>");
 
             }
         }

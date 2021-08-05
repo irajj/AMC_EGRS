@@ -48,7 +48,7 @@
                                             <%--<a href="/ForgotUsername" class="pl-1">Forgot Username</a>--%>
                                         </div>
                                         <div class="text-center loginHelp mt-2">
-                                            <a href="signup.aspx" class="pr-2 border-right">Click here to sign up</a>
+                                            <a href="register.aspx" class="pr-2 border-right">Click here to sign up</a>
                                         </div>
                                     </div>
                                 </div>

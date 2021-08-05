@@ -19,8 +19,8 @@ namespace AMC_EGRS
         {
             try
             {
-                string gMailAccount = "amcegrsahmd@gmail.com";
-                string password = "egrs@123";
+                string gMailAccount = "amcegrsextensive@gmail.com";
+                string password = "amc@1234";
                 NetworkCredential loginInfo = new NetworkCredential(gMailAccount, password);
                 MailMessage msg = new MailMessage();
                 msg.From = new MailAddress(gMailAccount, "AMC EGRS");

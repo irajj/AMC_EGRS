@@ -50,10 +50,12 @@ namespace AMC_EGRS.citizen
                 cmd.ExecuteNonQuery();
                 con.Close();
                 string msg = "";
-                msg = "Hey 👋👋👋 <br>“br><br> Your Feedback has been successfully registered<br>Thank you in for your patience! <br> Have a Great day! 😃😃 <br> Team Egrs";
-                if(GmailSender.SendMail(usremailfeed.Text, "Feedback Receivee" , msg))
+                msg = "Hey 👋👋👋 <br><br> Your Feedback has been successfully registered<br>Thank you in for your patience! <br> Have a Great day! 😃😃 <br> Team Egrs";
+                if(GmailSender.SendMail(usremailfeed.Text, "Feedback Received" , msg))
                 {
-                    Response.Write("<script>alert('Your Feedback Received Succesfully')</script>");
+                    //Response.Write("<script>alert('Your Feedback Received Succesfully')</script>");
+                    Response.Write(@"<script language='javascript'>alert('Your Feedback Received Succesfully 🙌🙌🙌 : \n" + "Please Check you E-Mail" + " .');window.location.href='home.aspx';</script>");
+
                 }
                 else
                 {

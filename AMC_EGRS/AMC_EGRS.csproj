@@ -1755,7 +1755,6 @@
     <Content Include="citizen\citizenassets\js\vertical\vertical-layout.min.js" />
     <Content Include="citizen\about.aspx" />
     <Content Include="citizen\home.aspx" />
-    <Content Include="citizen\signup.aspx" />
     <Content Include="citizen\contact.aspx" />
     <Content Include="citizen\faq.aspx" />
     <Content Include="citizen\signin.aspx" />
@@ -1766,6 +1765,7 @@
     <Content Include="citizen\forgotpassword.aspx" />
     <Content Include="citizen\complaintemail.aspx" />
     <Content Include="citizen\complaintphone.aspx" />
+    <Content Include="citizen\register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1944,13 +1944,6 @@
     <Compile Include="citizen\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="citizen\signup.aspx.cs">
-      <DependentUpon>signup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="citizen\signup.aspx.designer.cs">
-      <DependentUpon>signup.aspx</DependentUpon>
-    </Compile>
     <Compile Include="citizen\contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2020,6 +2013,13 @@
     </Compile>
     <Compile Include="citizen\complaintphone.aspx.designer.cs">
       <DependentUpon>complaintphone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citizen\register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citizen\register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
     </Compile>
     <Compile Include="GmailSender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

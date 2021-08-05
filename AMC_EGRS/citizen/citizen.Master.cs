@@ -26,67 +26,76 @@ namespace AMC_EGRS.citizen
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            string profilename = Request.RawUrl;
-            if (Session["user"] != null)
+            if (!IsPostBack)
             {
-                ardown.Visible = true;
-                usersignsubmit.Visible = false;
-                if (profilename.Contains("signin.aspx") || profilename.Contains("about.aspx") || profilename.Contains("contact.aspx") || profilename.Contains("faq.aspx") || profilename.Contains("home.aspx") || profilename.Contains("profile.aspx") || profilename.Contains("registration.aspx") || profilename.Contains("signup.aspx"))
+
+                string profilename = Request.RawUrl;
+                if (Session["user"] != null)
                 {
-                    mycon();
-                    cmd = new SqlCommand("select user_name from user_master where user_email=@em", con);
-                    cmd.Parameters.AddWithValue("@em", Session["user"].ToString());
-                    da = new SqlDataAdapter(cmd);
-                    ds = new DataSet();
-                    da.Fill(ds);
-                    if (ds.Tables[0].Rows.Count > 0)
-                    {
-                        string username = ds.Tables[0].Rows[0]["user_name"].ToString();
-                        userwelcome.InnerHtml = username;
-                        userwelcome.InnerText = username;
-                    }
-                    con.Close();
-                    
-                }
+                    ardown.Visible = true;
+                    usersignsubmit.Visible = false;
 
-            }
-            else
-            {
-                userwelcome.InnerHtml = "";
-                userwelcome.InnerText = "";
-                ardown.Visible = false;
-            }
-            if (Request.QueryString["hindilan"] == "HINDI")
-            {
-                home.Text = "होम";
-                faq.Text = "अक्सर पूछे जाने वाले प्रश्न";
-                contact.Text = "संपर्क करें";
-                OffAbout.Text = "हमारे बारे में";
-                EGRSLAN.Text = "Extensive Grievance Redressal System";
-                cregis.Text = "<b>शिकायत पंजीकरण</b>";
-                c1on.Text = "<b>ऑनलाइन</b>";
-                c2em.Text = "<b>ईमेल के माध्यम से</b>";
-                c3ph.Text = "<b>फोन के माध्यम से</b>";
-                roc.Text = "<b>शिकायत फिर से खोलें</b>";
-                rocon.Text = "<b>ऑनलाइन</b>";
-                cs.Text = "<b>शिकायत की स्थिति</b>";
-                cson.Text = "<b>ऑनलाइन</b>";
-                cf.Text = "<b>नागरिक प्रतिक्रिया</b>";
-                cff.Text = "<b>प्रतिक्रिया</b>";
-                support.Text = "<b>सहायता</b>";
-                supab.Text = "<b>हमारे बारे में</b>";
-                supfaq.Text = "<b>सामान्य प्रश्नोत्तर</b>";
-                supcon.Text = "<b>संपर्क करें</b>";
-                officiallan.Text = "<b>भाषा चुनें</b>";
-                signlan.Text = "<b>साइन इन करें</ b>";
+                    if (profilename.Contains("signin.aspx") || profilename.Contains("regcom.aspx") || profilename.Contains("home.aspx") || profilename.Contains("contact.aspx") || profilename.Contains("faq.aspx") || profilename.Contains("home.aspx") || profilename.Contains("profile.aspx") || profilename.Contains("registration.aspx") || profilename.Contains("signup.aspx"))
+                    {
+                        mycon();
+                        cmd = new SqlCommand("select c_name from citizen_master where c_email=@em", con);
+                        cmd.Parameters.AddWithValue("@em", Session["user"].ToString());
+                        da = new SqlDataAdapter(cmd);
+                        ds = new DataSet();
+                        da.Fill(ds);
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                            string username = ds.Tables[0].Rows[0]["c_name"].ToString();
+                            userwelcome.InnerHtml = username;
+                            userwelcome.InnerText = username;
+                        }
+                        con.Close();
+
+                    }
+
+                }
+                else
+                {
+                    userwelcome.InnerHtml = "";
+                    userwelcome.InnerText = "";
+                    ardown.Visible = false;
+                    usersignsubmit.Visible = true;
+
+                }
+                if (Request.QueryString["hindilan"] == "HINDI")
+                {
+                    home.Text = "होम";
+                    faq.Text = "अक्सर पूछे जाने वाले प्रश्न";
+                    contact.Text = "संपर्क करें";
+                    OffAbout.Text = "हमारे बारे में";
+                    EGRSLAN.Text = "Extensive Grievance Redressal System";
+                    cregis.Text = "<b>शिकायत पंजीकरण</b>";
+                    c1on.Text = "<b>ऑनलाइन</b>";
+                    c2em.Text = "<b>ईमेल के माध्यम से</b>";
+                    c3ph.Text = "<b>फोन के माध्यम से</b>";
+                    roc.Text = "<b>शिकायत फिर से खोलें</b>";
+                    rocon.Text = "<b>ऑनलाइन</b>";
+                    cs.Text = "<b>शिकायत की स्थिति</b>";
+                    cson.Text = "<b>ऑनलाइन</b>";
+                    cf.Text = "<b>नागरिक प्रतिक्रिया</b>";
+                    cff.Text = "<b>प्रतिक्रिया</b>";
+                    support.Text = "<b>सहायता</b>";
+                    supab.Text = "<b>हमारे बारे में</b>";
+                    supfaq.Text = "<b>सामान्य प्रश्नोत्तर</b>";
+                    supcon.Text = "<b>संपर्क करें</b>";
+                    officiallan.Text = "<b>भाषा चुनें</b>";
+                    signlan.Text = "<b>साइन इन करें</ b>";
+                }
             }
         }
 
         protected void userlogout_Click(object sender, EventArgs e)
         {
             Session.Abandon();
-            Response.Redirect("home.aspx");
+            Session.Clear();
+            ardown.Visible = false;
+            usersignsubmit.Visible = true;
+            Response.Redirect("home.aspx?Logout=User");
         }
 
         protected void HindiLang_Click(object sender, EventArgs e)

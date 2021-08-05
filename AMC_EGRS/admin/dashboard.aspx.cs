@@ -25,11 +25,7 @@ namespace AMC_EGRS.admin
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (Session["admin"] == null)
-            {
-                Response.Redirect("AdminLogin.aspx");
-            }
+          
             //count complaint
             mycon();
             cmd = new SqlCommand("select COUNT(*) from complaint_master", con);
@@ -128,7 +124,7 @@ namespace AMC_EGRS.admin
 
             //user count
             mycon();
-            cmd = new SqlCommand("select COUNT(*) from user_master", con);
+            cmd = new SqlCommand("select COUNT(*) from citizen_master", con);
             da = new SqlDataAdapter(cmd);
             ds = new DataSet();
             da.Fill(ds);
